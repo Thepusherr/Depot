@@ -1,0 +1,19 @@
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/home/pusher/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240607-34730-5bwb0i sitelibdir\=./.gem.20240607-34730-5bwb0i clean
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240607-34730-5bwb0i sitelibdir\=./.gem.20240607-34730-5bwb0i
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240607-34730-5bwb0i sitelibdir\=./.gem.20240607-34730-5bwb0i install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240607-34730-5bwb0i/debug
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240607-34730-5bwb0i sitelibdir\=./.gem.20240607-34730-5bwb0i clean
