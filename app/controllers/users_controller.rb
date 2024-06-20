@@ -70,4 +70,4 @@ class UsersController < ApplicationController
 
 rescue_from 'User::Error' do |exception|
   redirect_to users_url, notice: exception.message
-end
+``end
