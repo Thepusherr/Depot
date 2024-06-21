@@ -68,6 +68,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :password, :password_confirmation)
     end
 
-rescue_from 'User::Error' do |exception|
-  redirect_to users_url, notice: exception.message
-``end
+  rescue_from 'User::Error' do |exception|
+    redirect_to users_url, notice: exception.message
+  end
+end

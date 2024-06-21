@@ -1,0 +1,17 @@
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+/home/pusher/.rvm/rubies/ruby-3.1.1/bin/ruby -I /home/pusher/.rvm/rubies/ruby-3.1.1/lib/ruby/3.1.0 -r ./siteconf20240621-173741-3dalm3.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+checking for rb_reg_onig_match() in ruby.h... no
+creating Makefile
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= clean
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\=
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/pusher/RubymineProjects/depot/vendor/bundle/ruby/3.1.0/gems/strscan-3.1.0/ext/strscan
+make DESTDIR\= install
+/usr/bin/install -m 0755 strscan.so ./.gem.20240621-173741-syjqrt
