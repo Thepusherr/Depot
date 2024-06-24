@@ -55,9 +55,14 @@ Rails.application.configure do
   config.force_ssl = true
 
   # Log to STDOUT by default
-  config.logger = ActiveSupport::Logger.new(STDOUT)
-    .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
-    .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
+  # config.logger = ActiveSupport::Logger.new(STDOUT)
+  #   .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
+  #   .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
+
+  require 'active_support/core_ext/numeric/bytes'
+  config.logger = Logger.new(config.paths['log'].first, 10, 10.megabytes)
+
+  config.active_support.bare = true
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
