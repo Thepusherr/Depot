@@ -108,6 +108,9 @@ GEM
     ffi (1.17.0-x86_64-darwin)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hpricot (0.8.6)
+    html2slim (0.2.0)
+      hpricot
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -315,6 +318,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  html2slim
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
