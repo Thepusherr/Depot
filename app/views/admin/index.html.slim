@@ -1,0 +1,9 @@
+.w-full
+  h1.mx-auto.text-lg.font-bold.text-4xl
+    | Welcome
+  p
+    |  It's 
+    = Time.now
+    | . We have 
+    = pluralize(@total_orders, "order")
+    | . 

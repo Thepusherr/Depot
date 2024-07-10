@@ -1,0 +1,14 @@
+.w-full
+  - if notice.present?
+    p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block
+      = notice
+  - content_for :title, "Carts"
+  .flex.justify-between.items-center
+    h1.font-bold.text-4xl
+      | Carts
+    = link_to "New cart", new_cart_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
+  #carts.min-w-full
+    - @carts.each do |cart|
+      = render cart
+      p
+        = link_to "Show this cart", cart, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium"
