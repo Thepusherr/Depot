@@ -20,13 +20,13 @@
         td.px-2.py-3
           = image_tag(product.image_url, class: 'w-40')
         td
-          h1.text-xl.font-bold.mb-3
-            = product.title
-          p
-            = truncate(strip_tags(product.description), length: 80)
-        td.px-3
 
-        ul
+        h1.text-xl.font-bold.mb-3
+          = product.title
+        p
+          = truncate(strip_tags(product.description), length: 80)
+        td.px-3
+          ul
 
         li
           = link_to 'Show', product, class: 'hover:underline'

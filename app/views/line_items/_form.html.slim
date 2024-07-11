@@ -1,9 +1,10 @@
 = form_with(model: line_item, class: "contents") do |form|
   - if line_item.errors.any?
     #error_explanation.bg-red-50.text-red-500.px-3.py-2.font-medium.rounded-lg.mt-3
-      h2
-        = pluralize(line_item.errors.count, "error")
-        |  prohibited this line_item from being saved:
+
+    h2
+      = pluralize(line_item.errors.count, "error")
+      |  prohibited this line_item from being saved:
     ul
       - line_item.errors.each do |error|
         li
