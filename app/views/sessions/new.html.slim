@@ -11,7 +11,6 @@
     .my-5
       = label_tag :password, 'Password:'
       = password_field_tag :password, params[:password],
-      -       class: "payment-field"
+              class: "payment-field"
     .actions
-      = submit_tag "Login", class: "rounded-lg py-3 px-5
-      -       bg-green-600 text-black inline-block font-medium cursor-pointer"
+      = submit_tag "Login", class: "rounded-lg py-3 px-5 bg-green-600 text-black inline-block font-medium cursor-pointer"

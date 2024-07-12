@@ -23,31 +23,30 @@ html
     section.flex
       nav.bg-green-900.p-6
         = render partial: 'layouts/cart', locals: {cart: @cart }
-        ul.text-gray-300.leading-8
 
-        li
-          a[href="/"]
-            = t('.home')
-        li
-          a[href="/questions"]
-            = t('.questions')
-        li
-          a[href="/news"]
-            = t('.news')
-        li
-          a[href="/contact"]
-            = t('.contact')
+        ul.text-gray-300.leading-8.my-2
+          li
+            a[href="/"]
+              = t('.home')
+          li
+            a[href="/questions"]
+              = t('.questions')
+          li
+            a[href="/news"]
+              = t('.news')
+          li
+            a[href="/contact"]
+              = t('.contact')
         - if session[:user_id]
           hr.my-2
           ul.text-gray-300.leading-8
-
-          li
-            = link_to 'Orders',   orders_path
-          li
-            = link_to 'Products', products_path
-          li
-            = link_to 'Users',    users_path
-          li
-            = button_to 'Logout', logout_path, method: :delete
+            li
+              = link_to 'Orders',   orders_path
+            li
+              = link_to 'Products', products_path
+            li
+              = link_to 'Users',    users_path
+            li
+              = button_to 'Logout', logout_path, method: :delete
       main.container.mx-auto.mt-4.px-5.flex
         = yield
