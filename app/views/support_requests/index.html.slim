@@ -1,5 +1,3 @@
-= javascript_include_tag 'application'
-
 ul
   - @support_requests.each do |support_request|
     li
@@ -9,57 +7,55 @@ ul
         code
           = support_request.email
         |  writes: 
-      p
-
-      blockquote
-
-        h2.font-bold.text-lg
-          = support_request.subject
-        = support_request.body
-      - if support_request.order
-        h3.font-bold
-          |  Recent Order
-        dl
-          dt
-            |  Name
-          dd.ml-6
-            = support_request.order.name
-          dt
-            |  Email
-          dd.ml-6
-            = support_request.order.email
-          dt
-            |  Address
-          dd.ml-6
-            = support_request.order.address
-          dt
-            |  PayType
-          dd.ml-6
-            = support_request.order.pay_type
-          dt
-            |  Line Items
-          dd.ml-6
-            ul
-              - support_request.order.line_items.each do |line_item|
-                li
-                  = line_item.product.title
-                  |  (
-                  = line_item.product.price
-                  | ) 
-      - else
-        h3.notice
-          | No associated order
-      - if support_request.response.blank?
-        = form_with(model: support_request,local: true, class: "depot_form") do |form|
-          .field.flex
-            = form.label :response, "Write Response"
-            = form.rich_text_area :response, id: :support_request_response
-          .actions
-            = form.submit "Send Response"
-      - else
-        h4.font-bold.text-lg
-          | Our response:
-        p
-          blockquote
-            = support_request.response
-      hr
+      div.mx-5
+        blockquote
+          h2.font-bold.text-lg
+            = support_request.subject
+          = support_request.body
+        - if support_request.order
+          h3.font-bold
+            |  Recent Order
+          dl
+            dt
+              |  Name
+            dd.ml-6
+              = support_request.order.name
+            dt
+              |  Email
+            dd.ml-6
+              = support_request.order.email
+            dt
+              |  Address
+            dd.ml-6
+              = support_request.order.address
+            dt
+              |  PayType
+            dd.ml-6
+              = support_request.order.pay_type
+            dt
+              |  Line Items
+            dd.ml-6
+              ul
+                - support_request.order.line_items.each do |line_item|
+                  li
+                    = line_item.product.title
+                    |  (
+                    = line_item.product.price
+                    | ) 
+        - else
+          h3.notice
+            | No associated order
+        - if support_request.response.blank?
+          = form_with(model: support_request,local: true, class: "depot_form") do |form|
+            .field.flex
+              = form.label :response, "Write Response"
+              = form.rich_text_area :response, id: :support_request_response, style: 'height: auto !important; min-width: 16em;', class: "mx-2"
+            .actions.mt-2
+              = form.submit "Send Response", style: 'border: black solid 1px;  padding: 0.5em'
+        - else
+          h4.font-bold.text-lg
+            | Our response:
+          p
+            blockquote
+              = support_request.response
+        hr

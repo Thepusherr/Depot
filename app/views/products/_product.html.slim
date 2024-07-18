@@ -8,7 +8,7 @@ p.my-5
 p.my-5
   strong.block.font-medium.mb-1
     | Description:
-  = ActionText::Content.new(product.description)
+  = ActionText::Content.new(product.description).to_plain_text
 p.my-5
   strong.block.font-medium.mb-1
     | Image url:
