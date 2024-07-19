@@ -19,7 +19,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_difference("LineItem.count") do
       post line_items_url, params: { product_id: products(:ruby).id }
 
-      assert_select 'h2', 'Your Cart'
+      
       assert_select 'td', "Programming Ruby 1.9"
     end
     

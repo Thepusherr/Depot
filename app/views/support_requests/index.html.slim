@@ -9,9 +9,10 @@ ul
         |  writes: 
       div.mx-5
         blockquote
-          h2.font-bold.text-lg
-            = support_request.subject
-          = support_request.body
+          .mx-5
+            h2.font-bold.text-lg
+              = support_request.subject
+            = support_request.body
         - if support_request.order
           h3.font-bold
             |  Recent Order
