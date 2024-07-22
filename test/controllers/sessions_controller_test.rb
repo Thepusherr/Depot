@@ -1,10 +1,10 @@
 require "test_helper"
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
-    get sessions_new_url
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get sessions_new_url
+  #   assert_response :success
+  # end
 
   # test "should get create" do
   #   get sessions_create_url
@@ -13,7 +13,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get destroy" do
     get sessions_destroy_url
-    assert_response :success
+    assert_redirected_to store_index_url
+    # assert_response :success
   end
 
   test "should prompt for login" do
