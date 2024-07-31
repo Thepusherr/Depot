@@ -1,0 +1,10 @@
+h1.doted::before { /* add the new bullet point */
+  display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    height: 0.25rem;
+    width: 0.25rem;
+    margin-right: 0.5rem;
+    background-color: black;
+}

@@ -10,7 +10,9 @@ class SupportRequestMailer < ApplicationMailer
 
   def respond(support_request)
     @support_request = support_request
-    p support_request
+    puts "3333333333333333333333333333333333"
+    puts support_request
+    puts support_request.subject
     mail to: @support_request.email, subject: "Re: #{@support_request.subject}"
   end
 end

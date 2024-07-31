@@ -1,7 +1,7 @@
 ul
   - @support_requests.each do |support_request|
     li
-      h1.font-bold.text-lg
+      h1.font-bold.text-xl.doted.my-2
         |  On 
         = support_request.created_at.to_formatted_s(:long)
         code
@@ -14,7 +14,7 @@ ul
               = support_request.subject
             = support_request.body
         - if support_request.order
-          h3.font-bold
+          h3.font-bold.my-2
             |  Recent Order
           dl
             dt
@@ -44,15 +44,16 @@ ul
                     = line_item.product.price
                     | ) 
         - else
-          h3.notice
+          h3.notice.bg-yellow-100.border-4.border-yellow-500.text-yellow-900.text-xl.rounded-lg.w-full.py-2.5.px-4.m-3.text-center.font-bold
             | No associated order
         - if support_request.response.blank?
           = form_with(model: support_request,local: true, class: "depot_form") do |form|
-            .field.flex
+            .flex
               = form.label :response, "Write Response"
+            .field.flex
               = form.rich_text_area :response, id: :support_request_response, style: 'height: auto !important; min-width: 16em;', class: "mx-2"
-            .actions.mt-2
-              = form.submit "Send Response", style: 'border: black solid 1px;  padding: 0.5em'
+            .actions.my-2
+              = form.submit "Send Response", style: 'padding: 0.5em', class: "font-bold w-full bg-green-100 border-2 border-green-600 rounded-lg text-green-900 text-xl"
         - else
           h4.font-bold.text-lg
             | Our response:
