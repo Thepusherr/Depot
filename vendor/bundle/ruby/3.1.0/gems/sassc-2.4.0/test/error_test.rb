@@ -2,6 +2,7 @@
 
 require_relative "test_helper"
 
+
 module SassC
   class ErrorTest < MiniTest::Test
     def render(data, opts={})

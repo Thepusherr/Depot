@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "channels"
 
+import "../stylesheets/application";
 import "./elements/current-time.js"
 import "trix"
 import "@rails/actiontext"
