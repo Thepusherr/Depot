@@ -50,7 +50,7 @@ ul
           = form_with(model: support_request,local: true, class: "depot_form") do |form|
             .flex
               = form.label :response, "Write Response"
-            .field.flex
+            .field.mt-2
               = form.rich_text_area :response, id: :support_request_response, style: 'height: auto !important; min-width: 16em;', class: "mx-2", data: { controller: "trix" }
             .actions.my-2
               = form.submit "Send Response", style: 'padding: 0.5em', class: "font-bold w-full bg-green-100 border-2 border-green-600 rounded-lg text-green-900 text-xl"
@@ -60,4 +60,3 @@ ul
           p
             blockquote
               = support_request.response
-        hr

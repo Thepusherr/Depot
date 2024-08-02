@@ -1,6 +1,8 @@
 doctype html
 html
   head
+    link[rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css"]
+    script[type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"]
     title
       | Pragprog Books Online Store
     meta[name="viewport" content="width=device-width,initial-scale=1"]
@@ -18,10 +20,11 @@ html
         = form_tag store_index_path, class: 'locale' do
           = select_tag 'set_locale',
             options_for_select(LANGUAGES, I18n.locale.to_s),
-            onchange: 'this.form.submit()'
+            onchange: 'this.form.submit()',
+            class: "text-black-800 bg-green-200 hover:bg-green-200 focus:ring-4 focus:outline-none focus:ring-green-700 font-medium rounded-lg text-sm text-center inline-flex items-center dark:bg-green-200 dark:hover:bg-green-200 dark:focus:ring-green-700 ml-6"
           = submit_tag 'submit', data: {'locale-target' => 'submit'}, :style => "display: none;"
     section.flex
-      nav.bg-green-900.p-6
+      nav.bg-green-900.p-6.min-h-screen
         = render partial: 'layouts/cart', locals: {cart: @cart }
 
         ul.text-gray-300.leading-8.my-2
