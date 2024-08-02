@@ -5,4 +5,4 @@
 @layer components {
   .input-field { @apply block shadow rounded-md border border-green-400 outline-none px-3 py-2 mt-2 w-full }
 }
-@import 'actiontext.scss';
+@import 'actiontext.css';@import 'actiontext.css';
