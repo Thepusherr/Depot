@@ -1,6 +1,6 @@
 ul
   - @support_requests.each do |support_request|
-    li
+    li.border-2.border-slate-400.m-4.p-4
       h1.font-bold.text-xl.doted.my-2
         |  On 
         = support_request.created_at.to_formatted_s(:long)
@@ -48,15 +48,14 @@ ul
             | No associated order
         - if support_request.response.blank?
           = form_with(model: support_request,local: true, class: "depot_form") do |form|
-            .flex
+            .flex.mt-4
               = form.label :response, "Write Response"
             .field.mt-2
               = form.rich_text_area :response, id: :support_request_response, style: 'height: auto !important; min-width: 16em;', class: "mx-2", data: { controller: "trix" }
             .actions.my-2
               = form.submit "Send Response", style: 'padding: 0.5em', class: "font-bold w-full bg-green-100 border-2 border-green-600 rounded-lg text-green-900 text-xl"
         - else
-          h4.font-bold.text-lg
+          h4.font-bold.text-lg.mt-4
             | Our response:
-          p
-            blockquote
-              = support_request.response
+          blockquote.mt-2.ml-6
+            = support_request.response
